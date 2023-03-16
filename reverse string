@@ -2,19 +2,21 @@ public class seven {
 	
 	public static void main(String[] args) {
      String s="kaviya.is.good.girl";
-		int i = s.length() - 1, j = s.length() - 1;
-		do
+		String answer="";
+		String flag="";
+		for(int index=str.length()-1;index>=0;index--)
 		{
-			while(j>=0 && s.charAt(j)!='.' )
+			if(str.charAt(index)!='.')
 			{
-				j--;
-				
+				flag=str.charAt(index)+flag;
 			}
-				
-			System.out.print(s.substring(j+1,i+1)+" ");
-				
-			j--;
-			i=j;
-		}while(j>=0);
+			else
+			{
+				answer=answer+flag+str.charAt(index);
+				flag="";
+			}
+		}
+		answer+=flag;
+		System.out.println(answer);
 	}
 }
